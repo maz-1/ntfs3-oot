@@ -1410,7 +1410,7 @@ static struct dentry *ntfs_mount(struct file_system_type *fs_type, int flags,
 
 static struct file_system_type ntfs_fs_type = {
 	.owner = THIS_MODULE,
-	.name = "ntfs3",
+	.name = "ntfs",
 	.mount = ntfs_mount,
 	.kill_sb = kill_block_super,
 	.fs_flags = FS_REQUIRES_DEV,
@@ -1473,7 +1473,7 @@ static void __exit exit_ntfs_fs(void)
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("ntfs3 filesystem");
 MODULE_AUTHOR("Konstantin Komarov");
-MODULE_ALIAS_FS("ntfs3");
+MODULE_ALIAS_FS("ntfs");
 
 module_init(init_ntfs_fs);
 module_exit(exit_ntfs_fs);
